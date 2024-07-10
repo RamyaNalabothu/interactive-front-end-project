@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competition Results</title>
+    <style>
+                body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo img {
+            width: 70px; 
+            height: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ff0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        .graph {
+            width: 100%;
+            height: 300px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .bar {
+            background-color: #007bff;
+            position: absolute;
+            bottom: 0;
+            width: calc(100% / 12);         }
+        .participant-label {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="images/logo.jpg" alt="Logo"></div>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Photos Gallery</a></li>
+                <li><a href="results.html">Competition Results</a></li>
+                <li><a href="showcase.html">Research Papers & Ideas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Competition Results</h2>
+        <h3>Results in Table Format</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Participant A</td>
+                    <td>95</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Participant B</td>
+                    <td>87</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Participant C</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Participant D</td>
+                    <td>76</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Participant E</td>
+                    <td>90</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+       <h3>Results in Graph Format</h3>
+        <div class="graph">
+            <div class="bar" style="height: 95%;"></div>
+            <div class="bar" style="height: 87%; left: calc(100% / 6);"></div>
+            <div class="bar" style="height: 80%; left: calc(100% / 6 * 2);"></div>
+            <div class="bar" style="height: 76%; left: calc(100% / 6 * 3);"></div>
+            <div class="bar" style="height: 90%; left: calc(100% / 6 * 4);"></div>
+            <div class="participant-label" style="left: 0;">A</div>
+            <div class="participant-label" style="left: calc(100% / 6);">B</div>
+            <div class="participant-label" style="left: calc(100% / 6 * 2);">C</div>
+            <div class="participant-label" style="left: calc(100% / 6 * 3);">D</div>
+            <div class="participant-label" style="left: calc(100% / 6 * 4);">E</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Contact Information: example@example.com | Phone: 123-456-7890
+    </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* Add CSS styles for home page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo img {
+            width: 70px; /* Adjust the size as needed */
+            height: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ff0;
+        }
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+        .fade {
+            animation: fadeEffect 6s infinite; /* Adjusted animation timing */
+        }
+        @keyframes fadeEffect {
+            0%, 100% {
+                opacity: 0;
+                transform: translateX(-50%);
+            }
+            10%, 90% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .slideshow-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .news-flash {
+            background-color: #ff4500;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="images/logo.jpg" alt="Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Photos Gallery</a></li>
+                <li><a href="results.html">Competition Results</a></li>
+                <li><a href="showcase.html">Research Papers & Ideas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="news-flash">
+        <marquee behavior="scroll" direction="left">This year BOOK FEST is ready now!!!!!!!!</marquee>
+    </div>
+
+    <div class="slideshow-container">
+        <img class="fade" src="images/photo1.jpg">
+        <img class="fade" src="images/photo2.jpg">
+        <img class="fade" src="images/photo3.jpg">
+    </div>
+
+    <footer class="footer">
+        Contact Information: example@example.com | Phone: 123-456-7890
+    </footer>
+
+    <script>
+        var fadeIndex = 0;
+        var slides = document.getElementsByClassName("fade");
+        function showSlides() {
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            fadeIndex++;
+            if (fadeIndex > slides.length) {fadeIndex = 1}    
+            slides[fadeIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000);
+        }
+        showSlides();
+    </script>
+</body>
+</html>
